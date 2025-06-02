@@ -2,7 +2,7 @@
 
 > Transition from Magento Developer to DevOps Engineer through a real pet project.
 
-## Стек
+## Stack
 - Laravel
 - Docker
 - GitHub Actions
