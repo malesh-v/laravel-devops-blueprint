@@ -9,7 +9,7 @@ services:
     restart: unless-stopped
     working_dir: /var/www/html
     volumes:
-      - ../:/var/www/html
+      - ./laravel-app:/var/www/html
       - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
     networks:
       - frontend-network
@@ -22,10 +22,10 @@ services:
     container_name: laravel_db
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: laravel
-      MYSQL_USER: laraveluser
-      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
       - dbdata:/var/lib/mysql
     networks:
