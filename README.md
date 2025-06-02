@@ -1,6 +1,6 @@
 # Laravel DevOps Blueprint
 
-> Перехід з Magento Dev у DevOps через реальний pet-проєкт.
+> Transition from Magento Developer to DevOps Engineer through a real pet project.
 
 ## Стек
 - Laravel
