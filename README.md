@@ -11,7 +11,7 @@
 - Ansible
 - Prometheus + Grafana
 
-🚀 Setup / Installation
+# 🚀 Setup / Installation
 ## 1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/laravel-devops-blueprint.git
