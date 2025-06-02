@@ -1,2 +1,12 @@
-# laravel-devops-blueprint
-DevOps Pet Project: Infrastructure-as-Code, CI/CD, Docker, AWS, and Monitoring around a Laravel application. Transitioning from Magento developer to DevOps engineer.
+# Laravel DevOps Blueprint
+
+> Перехід з Magento Dev у DevOps через реальний pet-проєкт.
+
+## Стек
+- Laravel
+- Docker
+- GitHub Actions
+- AWS (EC2)
+- Terraform
+- Ansible
+- Prometheus + Grafana
