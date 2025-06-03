@@ -1,6 +1,4 @@
 # Docker Compose file
-version: '3.8'
-
 services:
   app:
     build:
@@ -11,6 +9,7 @@ services:
     volumes:
       - ./laravel-app:/var/www/html
       - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+      - ./docker/php/entrypoint.sh:/var/www/html/docker/php/entrypoint.sh
     networks:
       - frontend-network
       - backend-network
@@ -48,6 +47,8 @@ volumes:
 
 networks:
   frontend-network:
+    name: laravel_frontend_network
     driver: bridge
   backend-network:
+    name: laravel_backend_network
     driver: bridge
