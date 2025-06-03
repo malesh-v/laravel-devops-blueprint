@@ -52,8 +52,10 @@ Ensure Laravel and MySQL containers share the same Docker network.
 
 
 # 🐳 Useful Docker commands
+```bash
 docker-compose up -d --build                  # Build and start containers
 docker-compose down -v                        # Stop and remove containers + volumes
 docker-compose logs -f                        # Follow container logs
 docker-compose exec app bash                  # Open shell inside Laravel container
 docker-compose exec app php artisan migrate   # Run migrations
+```
