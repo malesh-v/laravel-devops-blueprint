@@ -35,6 +35,7 @@ Ensure that the database configuration in laravel-app/.env matches your Docker e
 docker-compose up -d --build
 ```
 
+
 # 🚑 Troubleshooting
 ## 🔐 Database connection fails after changing .env
 If you updated database credentials in .env after initial setup, MySQL will still use old credentials because the data volume persists.
@@ -48,6 +49,7 @@ docker-compose up -d --build
 
 ## 🐘 Can't connect to MySQL from Laravel
 Ensure Laravel and MySQL containers share the same Docker network.
+
 
 # 🐳 Useful Docker commands
 docker-compose up -d --build                  # Build and start containers
