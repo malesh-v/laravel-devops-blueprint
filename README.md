@@ -28,9 +28,18 @@ Edit .env to set your database credentials. Replace the placeholder values with 
 ```bash
 cp laravel-app/.env.example laravel-app/.env
 ```
-Ensure that the database configuration in laravel-app/.env matches your Docker environment:
+Ensure that the database configuration in laravel-app/.env matches your Docker environment.
 
-## 4. Start the Docker containers:
+## 4. Configure the Laravel environment file for using redis:
+```bash
+CACHE_DRIVER=redis
+SESSION_DRIVER=redis
+REDIS_HOST=redis
+REDIS_PASSWORD=null
+REDIS_PORT=6379
+```
+
+## 5. Start the Docker containers:
 ```bash
 docker-compose up -d --build
 ```
