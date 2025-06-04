@@ -42,6 +42,13 @@ services:
     networks:
       - frontend-network
 
+  redis:
+    image: redis:7-alpine
+    container_name: laravel_redis
+    restart: unless-stopped
+    networks:
+      - backend-network
+
 volumes:
   dbdata:
 
