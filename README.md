@@ -55,6 +55,33 @@ docker-compose up -d --build
 8. After success, go to **Dashboards** → **New** → **Import** again.  
 9. Enter the dashboard ID, select the newly added Prometheus data source, then click **Import**.
 
+## Configure Mailhog
+⚙️ Laravel .env Settings
+Update your .env in laravel-app/.env:
+```
+MAIL_MAILER=smtp
+MAIL_HOST=mailhog
+MAIL_PORT=1025
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS=example@example.com
+MAIL_FROM_NAME="${APP_NAME}"
+
+```
+# How to test?
+Send a test email from Laravel using Tinker:
+```
+docker-compose exec app php artisan tinker
+```
+In Tinker
+```
+use Illuminate\Support\Facades\Mail;
+Mail::raw('This is a test email', function ($message) {
+    $message->to('test@example.com')->subject('Test Mail');
+});
+```
+
 # 🚑 Troubleshooting
 ## 🔐 Database connection fails after changing .env
 If you updated database credentials in .env after initial setup, MySQL will still use old credentials because the data volume persists.
