@@ -44,6 +44,16 @@ REDIS_PORT=6379
 docker-compose up -d --build
 ```
 
+## Configure Grafana
+1. Open Grafana in your browser at port `3000` (e.g., http://localhost:3000).  
+2. Go to **Dashboards** → **New** → **Import**.  
+3. Enter the dashboard ID (e.g., `1860`) and click **Load**.  
+4. Click **Configure new source** in the data source selection.  
+5. Select **Prometheus** from the list.  
+6. Enter the Prometheus URL, usually `http://prometheus:9090` (or `http://localhost:9090` if local).  
+7. Click **Save and Test** to verify connection.  
+8. After success, go to **Dashboards** → **New** → **Import** again.  
+9. Enter the dashboard ID, select the newly added Prometheus data source, then click **Import**.
 
 # 🚑 Troubleshooting
 ## 🔐 Database connection fails after changing .env
