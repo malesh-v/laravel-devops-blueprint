@@ -64,7 +64,8 @@ Reset the database volume:
 docker-compose down -v
 docker-compose up -d --build
 ```
-⚠️ This will delete all database data! Use only in development.
+> [!CAUTION]
+> This will delete all database data! Use only in development.
 
 ## 🐘 Can't connect to MySQL from Laravel
 Ensure Laravel and MySQL containers share the same Docker network.
