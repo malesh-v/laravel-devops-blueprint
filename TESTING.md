@@ -42,5 +42,5 @@ Mail::raw('This is a test email', function ($message) {
 Email appears in MailHog Web UI at http://localhost:8025.
 
 ### 💡 Notes
-MailHog listens on port 1025 for SMTP, and on port 8025 for Web UI.
-The Laravel mail config (MAIL_HOST=mailhog, MAIL_PORT=1025) should be set correctly in your laravel's .env file.
+- MailHog listens on port 1025 for SMTP, and on port 8025 for Web UI.
+- The Laravel mail config (MAIL_HOST=mailhog, MAIL_PORT=1025) should be set correctly in your laravel's .env file.
