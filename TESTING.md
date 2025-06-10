@@ -1,6 +1,6 @@
 # 🧪 Manual Testing Scenarios
 
-This file contains some manual testing instructions.
+🧑🏻‍💻 This file contains some manual testing instructions.
 
 ---
 
@@ -20,6 +20,8 @@ This file contains some manual testing instructions.
 Prometheus evaluates the alert rule.
 Alert shows in Alertmanager UI at http://localhost:9093.
 Email notification appears in MailHog at http://localhost:8025.
+
+---
 
 ## 👉🏻 Test: Laravel Sends Email to MailHog
 
