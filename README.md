@@ -69,18 +69,6 @@ MAIL_FROM_ADDRESS=example@example.com
 MAIL_FROM_NAME="${APP_NAME}"
 
 ```
-# How to test?
-Send a test email from Laravel using Tinker:
-```
-docker-compose exec app php artisan tinker
-```
-In Tinker
-```
-use Illuminate\Support\Facades\Mail;
-Mail::raw('This is a test email', function ($message) {
-    $message->to('test@example.com')->subject('Test Mail');
-});
-```
 
 # 🚑 Troubleshooting
 ## 🔐 Database connection fails after changing .env
