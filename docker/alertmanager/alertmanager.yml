@@ -1,0 +1,13 @@
+global:
+  smtp_smarthost: 'mailhog:1025'
+  smtp_from: 'alertmanager@example.com'
+  smtp_require_tls: false
+
+route:
+  receiver: 'email-alert'
+
+receivers:
+  - name: 'email-alert'
+    email_configs:
+      - to: 'test@example.com'
+        send_resolved: true
