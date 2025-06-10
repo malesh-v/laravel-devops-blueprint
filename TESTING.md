@@ -1,6 +1,6 @@
 # 🧪 Manual Testing Scenarios
 
-This file contains manual testing instructions to verify key observability.
+This file contains some manual testing instructions.
 
 ---
 
@@ -16,7 +16,7 @@ This file contains manual testing instructions to verify key observability.
    ```bash
    docker exec -it laravel_app stress --cpu 1 --timeout 60
    ```
-## ✅ Expected:
+### ✅ Expected:
 Prometheus evaluates the alert rule.
 Alert shows in Alertmanager UI at http://localhost:9093.
 Email notification appears in MailHog at http://localhost:8025.
@@ -32,5 +32,5 @@ Mail::raw('This is a test email', function ($message) {
     $message->to('test@example.com')->subject('Test Mail');
 });
 ```
-## ✅ Expected:
+### ✅ Expected:
 Email appears in MailHog Web UI at http://localhost:8025.
