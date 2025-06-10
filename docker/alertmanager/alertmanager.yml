@@ -11,3 +11,4 @@ receivers:
     email_configs:
       - to: 'test@example.com'
         send_resolved: true
+        smarthost: 'mailhog:1025'
