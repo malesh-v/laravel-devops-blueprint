@@ -2,7 +2,7 @@ groups:
   - name: container_alerts
     rules:
       - alert: HighContainerCPUUsage
-        expr: rate(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="app"}[1m]) * 100 > 0.01  # Calculates the per-second CPU usage rate over the last 1 minute for the 'app' service container and triggers alert if usage exceeds 1%
+        expr: rate(container_cpu_usage_seconds_total{container_label_com_docker_compose_service="app"}[1m]) * 100 > 80  # Triggers alert if CPU usage > 80% over 1 minute
         for: 5s
         labels:
           severity: warning

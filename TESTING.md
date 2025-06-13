@@ -14,7 +14,7 @@
    ```
 **Trigger CPU load:**
    ```bash
-   docker exec -it laravel_app stress --cpu 1 --timeout 60
+   docker exec -it laravel_app stress --cpu 2 --timeout 60
    ```
 ### ✅ Expected:
 Prometheus evaluates the alert rule.
