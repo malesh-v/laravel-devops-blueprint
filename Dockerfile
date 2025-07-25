@@ -20,8 +20,6 @@ RUN composer install --no-dev --optimize-autoloader
 
 RUN php artisan config:clear
 
-RUN php artisan key:generate
-
 EXPOSE 9000
 
 CMD ["php-fpm"]
