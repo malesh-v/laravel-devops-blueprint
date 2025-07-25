@@ -20,9 +20,11 @@ RUN composer install --no-dev --optimize-autoloader
 
 RUN php artisan config:clear
 
-EXPOSE 9000
-
 COPY ./docker/php/entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+
 CMD ["php-fpm"]
+
+EXPOSE 9000
