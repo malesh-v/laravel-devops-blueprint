@@ -22,5 +22,7 @@ RUN php artisan config:clear
 
 EXPOSE 9000
 
+COPY ./docker/php/entrypoint /usr/local/bin/entrypoint.sh
+
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 CMD ["php-fpm"]
