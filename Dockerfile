@@ -24,6 +24,8 @@ RUN chmod +x /usr/local/bin/entrypoint.sh \
 RUN composer install --no-dev --optimize-autoloader
 RUN php artisan config:clear
 
+RUN sed -i 's|listen = .*|listen = 9000|' /usr/local/etc/php-fpm.d/www.conf
+
 EXPOSE 80
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
