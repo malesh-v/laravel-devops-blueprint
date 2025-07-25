@@ -12,6 +12,10 @@ COPY ./laravel-app /var/www/html
 
 COPY ./docker/php/local.ini /usr/local/etc/php/conf.d/local.ini
 
+RUN mkdir -p bootstrap/cache \
+    && chown -R www-data:www-data bootstrap/cache \
+    && chmod -R 775 bootstrap/cache
+
 RUN composer install --no-dev --optimize-autoloader
 
 RUN php artisan config:clear
