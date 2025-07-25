@@ -27,7 +27,7 @@ RUN sed -i 's|listen = .*|listen = 9000|' /usr/local/etc/php-fpm.d/www.conf
 
 ENV PORT=8080
 
-RUN /bin/sh -c "envsubst '\$PORT' < /etc/nginx/conf.d/single-container.conf.template > /etc/nginx/conf.d/default.conf"
+RUN echo "PORT=$PORT" && envsubst '$PORT' < /etc/nginx/conf.d/single-container.conf.template > /etc/nginx/conf.d/default.conf
 
 EXPOSE 8080
 
