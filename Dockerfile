@@ -14,7 +14,7 @@ COPY ./laravel-app /var/www/html
 COPY ./docker/php/local.ini /usr/local/etc/php/conf.d/local.ini
 COPY ./docker/nginx/single-container/default.conf /etc/nginx/conf.d/default.conf
 COPY ./docker/nginx/single-container/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-COPY ./docker/php/entrypoint /usr/local/bin/entrypoint.sh
+COPY ./docker/php/entrypoint.sh /usr/local/bin/entrypoint.sh
 
 RUN chmod +x /usr/local/bin/entrypoint.sh \
     && mkdir -p bootstrap/cache \
