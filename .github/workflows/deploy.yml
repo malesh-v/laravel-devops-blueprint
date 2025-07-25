@@ -18,3 +18,14 @@ jobs:
           command: up
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+
+      - name: Run Laravel migrations
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y php php-mbstring php-xml php-bcmath php-mysql unzip curl
+
+          curl -sS https://getcomposer.org/installer | php
+          php composer.phar install --no-dev --optimize-autoloader
+
+          cd laravel-app
+          php artisan migrate --force
